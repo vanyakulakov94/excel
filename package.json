@@ -7,7 +7,8 @@
      "test": "jest",
     "test:watch": "jest --watch",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "lint": "npm eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,31 @@
     "url": "https://github.com/vanyakulakov94/excel/issues"
   },
   "homepage": "https://github.com/vanyakulakov94/excel#readme",
+  "browserslist": "> 0.25%, not dead",
   "devDependencies": {
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
-  }
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-loader": "^4.0.2",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.1",
+    "mini-css-extract-plugin": "^2.2.0",
+    "sass": "^1.38.0",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.0.0"
+},
+"dependencies": {
+  "@babel/polyfill": "^7.12.1",
+  "eslint-plugin-jest": "^24.4.2",
+  "normalize.css": "^8.0.1"
+}
 }
